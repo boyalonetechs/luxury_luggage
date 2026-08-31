@@ -18,7 +18,7 @@ export default function HeroSection() {
       className="relative min-h-screen bg-[#EFECE6] font-sans text-[#2D2D2D]"
     >
       {/* Navigation Bar */}
-      <nav className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+      <nav className="flex items-center justify-between px-4 sm:px-6 md:px-8 py-4 md:py-6 max-w-7xl mx-auto">
         {/* Logo */}
         <Image
           src="/logo.png"
@@ -26,7 +26,7 @@ export default function HeroSection() {
           width={564}
           height={444}
           priority
-          className="w-16 h-auto"
+          className="w-12 sm:w-16 h-auto"
         />
 
         {/* Center Nav Links */}
@@ -103,7 +103,7 @@ export default function HeroSection() {
       )}
 
       {/* Hero Content Wrapper */}
-      <div className="relative max-w-7xl mx-auto min-h-[calc(100vh-88px)] flex flex-col justify-center px-8 pb-12">
+      <div className="relative max-w-7xl mx-auto min-h-[calc(100vh-88px)] flex flex-col justify-center px-4 sm:px-6 md:px-8 pb-12">
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0 overflow-hidden rounded-lg">
           <Image
@@ -118,24 +118,24 @@ export default function HeroSection() {
         </div>
 
         {/* Text Overlay Layer */}
-        <div className="relative z-10 max-w-lg text-white space-y-6">
-          <ScrollReveal direction="up" delay={0.1}>
-            <h1 className="font-serif text-6xl md:text-7xl font-normal leading-tight tracking-tight drop-shadow-sm">
+        <div className="relative z-10 max-w-lg text-white space-y-5 md:space-y-6">
+          <ScrollReveal direction="left" delay={0.1}>
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-tight drop-shadow-sm">
               Travel,
               <br />
               <span className="italic">Refined.</span>
             </h1>
           </ScrollReveal>
 
-          <ScrollReveal direction="up" delay={0.25}>
-            <p className="text-stone-200 text-lg md:text-xl font-light max-w-sm drop-shadow-sm">
+          <ScrollReveal direction="right" delay={0.25}>
+            <p className="text-stone-200 text-base md:text-xl font-light max-w-sm drop-shadow-sm">
               Exceptional luggage designed for journeys that deserve more.
             </p>
           </ScrollReveal>
 
           {/* Action Buttons */}
-          <ScrollReveal direction="up" delay={0.4}>
-            <div className="flex items-center space-x-6 pt-4">
+          <ScrollReveal direction="left" delay={0.4}>
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-4">
               <a
                 href="#collection"
                 className="bg-white text-stone-900 px-6 py-3.5 rounded-sm text-xs tracking-wider uppercase font-medium flex items-center space-x-3 hover:bg-stone-100 transition-colors shadow-sm"
