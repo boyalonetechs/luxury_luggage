@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function FooterSection() {
@@ -27,7 +28,13 @@ export default function FooterSection() {
           {/* Brand Info Column */}
           <div className="md:col-span-5 space-y-6">
             {/* Logo */}
-            <img src="/logo.png" alt="Luxury Luggage" className="w-18 h-auto" />
+            <Image
+              src="/logo.png"
+              alt="Luxury Luggage"
+              width={564}
+              height={444}
+              className="w-18 h-auto"
+            />
 
             {/* Tagline */}
             <p className="text-xs text-stone-400 font-light tracking-wide max-w-xs pt-2">
