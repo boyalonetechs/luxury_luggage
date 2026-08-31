@@ -32,7 +32,7 @@ export default function StorySection() {
           <p className="text-[#4A4A4A] text-sm md:text-base font-light leading-relaxed tracking-wide max-w-lg">
             LUXURY LUGGAGES was created around a simple idea: travel essentials
             should combine function, beauty and lasting craftsmanship. Founded
-            in 2014, we've spent a decade perfecting the art of the considered
+            in 2014, we&apos;ve spent a decade perfecting the art of the considered
             journey.
           </p>
 

@@ -1,6 +1,15 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 export default function HeroSection() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navLinks = [
+    { label: "The Collection", href: "#" },
+    { label: "Our Story", href: "#" },
+    { label: "Craftsmanship", href: "#" },
+  ];
+
   return (
     <div className="relative min-h-screen bg-[#EFECE6] font-sans text-[#2D2D2D]">
       {/* Navigation Bar */}
@@ -10,28 +19,76 @@ export default function HeroSection() {
 
         {/* Center Nav Links */}
         <div className="hidden md:flex items-center space-x-10 text-xs tracking-widest uppercase font-medium text-stone-700">
-          <a href="#" className="hover:text-black transition-colors">
-            THE COLLECTION
-          </a>
-          <a href="#" className="hover:text-black transition-colors">
-            OUR STORY
-          </a>
-          <a href="#" className="hover:text-black transition-colors">
-            CRAFTSMANSHIP
-          </a>
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="hover:text-black transition-colors"
+            >
+              {link.label.toUpperCase()}
+            </a>
+          ))}
         </div>
 
         {/* Right Nav Link */}
         <div className="flex items-center">
           <a
             href="#"
-            className="flex items-center space-x-2 text-xs tracking-widest uppercase font-medium hover:text-black transition-colors"
+            className="hidden md:flex items-center space-x-2 text-xs tracking-widest uppercase font-medium hover:text-black transition-colors"
           >
             <span>DISCOVER LUXURY</span>
             <span>&rarr;</span>
           </a>
+
+          {/* Hamburger Menu Button */}
+          <button
+            type="button"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+            className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5"
+          >
+            <span
+              className={`block w-6 h-0.5 bg-[#2D2D2D] transition-transform duration-300 ${
+                menuOpen ? "translate-y-2 rotate-45" : ""
+              }`}
+            ></span>
+            <span
+              className={`block w-6 h-0.5 bg-[#2D2D2D] transition-opacity duration-300 ${
+                menuOpen ? "opacity-0" : ""
+              }`}
+            ></span>
+            <span
+              className={`block w-6 h-0.5 bg-[#2D2D2D] transition-transform duration-300 ${
+                menuOpen ? "-translate-y-2 -rotate-45" : ""
+              }`}
+            ></span>
+          </button>
         </div>
       </nav>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-[#EFECE6] border-t border-stone-300 px-8 py-6 space-y-4">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="block text-sm tracking-widest uppercase font-medium text-[#2D2D2D] hover:text-black transition-colors"
+            >
+              {link.label.toUpperCase()}
+            </a>
+          ))}
+          <a
+            href="#"
+            onClick={() => setMenuOpen(false)}
+            className="block text-sm tracking-widest uppercase font-medium text-[#2D2D2D] hover:text-black transition-colors"
+          >
+            Discover Luxury &rarr;
+          </a>
+        </div>
+      )}
 
       {/* Hero Content Wrapper */}
       <div className="relative max-w-7xl mx-auto min-h-[calc(100vh-88px)] flex flex-col justify-center px-8 pb-12">
