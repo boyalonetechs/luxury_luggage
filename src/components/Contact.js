@@ -34,10 +34,10 @@ export default function ContactCtaSection() {
         <ScrollReveal direction="zoom" delay={0.3}>
           <div className="pt-4">
             <a
-              href="#"
+              href="tel:+07018927330"
               className="inline-flex items-center space-x-2 bg-[#F6F4EE] text-[#1A1A1A] px-7 py-3.5 rounded-sm text-xs tracking-widest uppercase font-semibold hover:bg-white transition-colors shadow-sm"
             >
-              <span>CONTACT US</span>
+              <span>CALL 0701 892 7330</span>
               <span>&rarr;</span>
             </a>
           </div>

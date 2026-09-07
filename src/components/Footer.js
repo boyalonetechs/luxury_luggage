@@ -10,9 +10,18 @@ export default function FooterSection() {
   ];
 
   const socialLinks = [
-    { label: "Instagram", href: "#" },
-    { label: "TikTok", href: "#" },
-    { label: "WhatsApp", href: "#" },
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/luxuryluggage_?stkn=OXUzZ3VxdWhkb3Fs",
+    },
+    {
+      label: "TikTok",
+      href: "https://www.tiktok.com/@luxuryluggage_ng?_r=1&_t=ZS-99XjLrsdAEp",
+    },
+    {
+      label: "Call / WhatsApp",
+      href: "tel:+07018927330",
+    },
   ];
 
   const legalLinks = [
